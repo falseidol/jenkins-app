@@ -8,16 +8,11 @@ public class HelloApplication {
 
     public static void main(String[] args) throws LifecycleException {
         Tomcat tomcat = new Tomcat();
+
         tomcat.getConnector().setPort(PORT);
-
-        // то самое "приложение" или "контекст" с пустым путём
         Context tomcatContext = tomcat.addContext("", null);
-
-        // класс Wrapper позволяет задать дополнительные настройки для сервлета
         Wrapper testServletWrapper =
                 Tomcat.addServlet(tomcatContext, "helloServlet", new HelloServlet());
-
-        // addMapping() сопоставляет URL-путь с сервлетом
         testServletWrapper.addMapping("/hello");
 
         tomcat.start();
