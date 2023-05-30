@@ -15,6 +15,6 @@ public class HelloApplication extends AbstractAnnotationConfigDispatcherServletI
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/"};
+        return new String[]{"/aboba/*"};
     }
 }
