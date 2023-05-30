@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HelloServlet {
     @GetMapping("/hello")
     public String helloWorld() {
-        return "Hello world6!";
+        return "Hello world7!";
     }
 }
